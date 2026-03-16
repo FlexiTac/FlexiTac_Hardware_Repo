@@ -17,7 +17,9 @@ This repository contains the hardware-side code and examples for reading FlexiTa
 - Arduino firmware for tactile data acquisition
 - Python visualization for real-time tactile readout
 
-
+To build the tactile sensors, follow the instructions below:
+[[Hardware Assembly Tutorial]](https://docs.google.com/document/d/1bvz6AL7BUkhj4Dj7n9DFXTjnGIX4-ziN8-smiCKpVZU/edit?usp=sharing)
+.
 
 ## Hardware Description
 
