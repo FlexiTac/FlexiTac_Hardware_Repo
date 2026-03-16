@@ -94,4 +94,5 @@ FlexiTac © 2026 by Columbia University is licensed under CC BY-NC 4.0. To view 
 
 
 ##  Acknowledgment
-We thank Yu-Wei Chao, Jie Xu, Yiyue Luo, Devin Murphy, Xinyue Zhu, Jimmy Wang, Irving Fang, Yixuan Wang, Hanxiao Jiang, Kaifeng Zhang, Changyi Lin, Xuhui Kang, Yuhao Zhou, Haonan Chen, Xinyi Yang, Yunxi Zhu, Naian Tao, Mingtong Zhang, Baoyu Li, and Rao Fu for their valuable discussions and support.
+We thank Yiyue Luo, Devin Murphy, Michael Foshey, Xinyue Zhu, Yunxi Zhu, Naian Tao, Jimmy Wang, Binglin Wang, Irving Fang, Hongyu Li, Yixuan Wang, Hanxiao Jiang, Kaifeng Zhang, Changyi Lin, Xuhui Kang, Yuhao Zhou, Pokuang Zhou, Siyu Ma, Chang Yu, Yuqi Liang, Haonan Chen, Rao Fu, Jinzhou Li, Yuming Gu, Fan Cheng, Xinyi Yang, Mingtong Zhang, Baoyu Li, Toru Lin, Haozhi Qi, Iretiayo Akinola
+, Jie Xu, and Yu-Wei Chao for their valuable discussions and support.
