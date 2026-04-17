@@ -37,7 +37,43 @@ The provided Python script initializes a baseline from the first few frames, sub
 
 
 
-## Installation and Running Example
+## Option 1 (Quick Start) 
+
+The fastest way to get running is to install the official [`flexitac`](https://pypi.org/project/flexitac/) package from PyPI. It bundles the firmware flasher, serial reader, and live heatmap as CLI tools — no need to clone this repo.
+
+### 1. Install
+
+```bash
+pip install "flexitac[examples]"
+```
+
+The `[examples]` extra pulls in `matplotlib` for the live heatmap.
+
+### 2. Stream / visualize
+
+```bash
+sudo chmod 777 /dev/ttyUSB*
+flexitac-heatmap --port /dev/ttyUSB0      # live heatmap
+flexitac-stream  --port /dev/ttyUSB0      # raw stream + FPS/stats
+```
+
+### 3. Use from Python
+
+```python
+from flexitac import FlexiTacSensor
+
+with FlexiTacSensor("/dev/ttyUSB0") as sensor:
+    for frame in sensor:
+        print(frame.normalized.shape, frame.normalized.max())
+```
+
+Source and issue tracker for the Python package: https://github.com/WT-MM/PyFlexiTac
+
+---
+
+## Option 2 (Development Installation)
+
+Use this path if you want to modify the firmware, hack on the visualization script, or develop against the raw hardware protocol. This is the source that the PyPI package wraps.
 
 ### 1. Upload the Arduino firmware
 
@@ -94,5 +130,5 @@ FlexiTac © 2026 by Columbia University is licensed under CC BY-NC 4.0. To view 
 
 
 ##  Acknowledgment
-We thank Yiyue Luo, Devin Murphy, Michael Foshey, Xinyue Zhu, Yunxi Zhu, Naian Tao, Jimmy Wang, Binglin Wang, Irving Fang, Hongyu Li, Yixuan Wang, Hanxiao Jiang, Kaifeng Zhang, Changyi Lin, Xuhui Kang, Yuhao Zhou, Pokuang Zhou, Siyu Ma, Chang Yu, Yuqi Liang, Haonan Chen, Rao Fu, Jinzhou Li, Yuming Gu, Fan Cheng, Xinyi Yang, Mingtong Zhang, Baoyu Li, Toru Lin, Haozhi Qi, Iretiayo Akinola
+We thank Yiyue Luo, Devin Murphy, Michael Foshey, Xinyue Zhu, Yunxi Zhu, Naian Tao, Wesley Maa, Jimmy Wang, Binglin Wang, Irving Fang, Hongyu Li, Yixuan Wang, Hanxiao Jiang, Kaifeng Zhang, Changyi Lin, Xuhui Kang, Yuhao Zhou, Pokuang Zhou, Siyu Ma, Chang Yu, Yuqi Liang, Haonan Chen, Rao Fu, Jinzhou Li, Yuming Gu, Fan Cheng, Xinyi Yang, Mingtong Zhang, Baoyu Li, Toru Lin, Haozhi Qi, Iretiayo Akinola
 , Jie Xu, and Yu-Wei Chao for their valuable discussions and support.
