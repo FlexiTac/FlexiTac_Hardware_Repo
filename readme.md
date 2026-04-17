@@ -41,7 +41,18 @@ The provided Python script initializes a baseline from the first few frames, sub
 
 The fastest way to get running is to install the official [`flexitac`](https://pypi.org/project/flexitac/) package from PyPI. It bundles the firmware flasher, serial reader, and live heatmap as CLI tools — no need to clone this repo.
 
-### 1. Install
+
+### 1. Upload the Arduino firmware
+
+Open `32_16_fast.ino` in the Arduino IDE, select the correct board and serial port, and upload it to the microcontroller.
+
+After uploading, the board should appear as a serial device such as:
+
+```bash
+/dev/ttyUSB0
+```
+
+### 2. Install
 
 ```bash
 pip install "flexitac[examples]"
@@ -49,7 +60,7 @@ pip install "flexitac[examples]"
 
 The `[examples]` extra pulls in `matplotlib` for the live heatmap.
 
-### 2. Stream / visualize
+### 3. Stream / visualize
 
 ```bash
 sudo chmod 777 /dev/ttyUSB*
@@ -57,7 +68,7 @@ flexitac-heatmap --port /dev/ttyUSB0      # live heatmap
 flexitac-stream  --port /dev/ttyUSB0      # raw stream + FPS/stats
 ```
 
-### 3. Use from Python
+### 4. Use from Python
 
 ```python
 from flexitac import FlexiTacSensor
